@@ -1,0 +1,10 @@
+<div class="container" *ngIf="!showEmptyCart">
+    <div class="col card">
+        <div class=" row " *ngFor="let val of quantArray ">
+            <h2>{{val.title}}</h2>
+            <h2>{{val.price}}</h2>
+            <button (click)="removeItem($event,val) ">Delete</button>
+        </div>
+    </div>
+</div>
+<div class="container " *ngIf="showEmptyCart ">The Cart is Empty!</div>

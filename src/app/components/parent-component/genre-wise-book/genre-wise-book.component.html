@@ -1,0 +1,21 @@
+<div class="grid-container">
+    <div class="grid-item" *ngFor="let num of booklist">
+        <div class=" title ">
+            <h2>{{num.title}}</h2>
+        </div>
+        <div class="price ">
+            <p>{{num.price}}</p>
+        </div>
+        <div class="author ">
+            <h2>{{num.authors}}</h2>
+        </div>
+        <div class="category ">
+            <h1>{{num.category}}</h1>
+        </div>
+        <div class="button">
+            <button (click)=" addToCart($event,num)">Add to Cart</button>
+        </div>
+
+    </div>
+    <button>GoToCart</button>
+</div>
